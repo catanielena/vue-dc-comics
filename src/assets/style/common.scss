@@ -13,6 +13,13 @@ body {
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
+h5 {
+    font-size: .9375rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
 //container
 .container {
     max-width: $widthContainer;
@@ -33,6 +40,13 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: .8rem;
+}
+
+//reset button
+button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
 }
 
 //flex-center-between

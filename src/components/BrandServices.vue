@@ -61,7 +61,6 @@ export default {
         .services {
 
             &__list {
-                display: flex;
                 @include flex--SB-C;
                 .list__item {
                     display: flex;
