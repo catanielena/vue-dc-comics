@@ -16,6 +16,8 @@ body {
 //container
 .container {
     max-width: $widthContainer;
+    margin: auto;
+    color: #fff;
 }
 
 //reset list
@@ -26,4 +28,7 @@ ul {
 //reset a
 a {
     display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .6875rem;
 }
