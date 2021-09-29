@@ -1,6 +1,6 @@
 <template>
     <section class="PageContent">     
-        <div class="container">
+        <div class="container page-content">
             <p>-->Content goes here&lt;--</p>
         </div>
     </section>

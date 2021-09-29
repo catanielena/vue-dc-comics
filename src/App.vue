@@ -29,4 +29,8 @@ export default {
 <style lang="scss">
   @import "/assets/style/common";
   @import "/assets/style/common";
+
+  main {
+    padding-top: $lineheightLink;
+  }
 </style>

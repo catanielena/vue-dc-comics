@@ -22,6 +22,8 @@ body {
 
 //reset list
 ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -30,5 +32,12 @@ a {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: .6875rem;
+    font-size: .8rem;
+}
+
+//flex-center-between
+@mixin flex--SB-C{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
