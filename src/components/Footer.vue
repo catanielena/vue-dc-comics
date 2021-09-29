@@ -27,7 +27,7 @@
                         </div>
                     </div>
                  <div class="top__img">
-                     <img src="img/dc-logo-bg.png" alt="">
+                     <img src="@/assets/img/dc-logo-bg.png" alt="">
                  </div>
                  </div>
              </div>
@@ -40,27 +40,27 @@
                     <ul class="right__list">
                         <li class="list__item">
                             <a href="#">
-                                <img src="img/footer-facebook.png" alt="facebook-icon">
+                                <img src="@/assets/img/footer-facebook.png" alt="facebook-icon">
                             </a>
                         </li>
                             <li>
                             <a href="#">
-                                <img src="img/footer-twitter.png" alt="twitter-icon">
+                                <img src="@/assets/img/footer-twitter.png" alt="twitter-icon">
                             </a>
                         </li>
                             <li>
                             <a href="#">
-                                <img src="img/footer-youtube.png" alt="youtube-icon">
+                                <img src="@/assets/img/footer-youtube.png" alt="youtube-icon">
                             </a>
                         </li>
                             <li>
                             <a href="#">
-                                <img src="img/footer-pinterest.png" alt="pinterest-icon">
+                                <img src="@/assets/img/footer-pinterest.png" alt="pinterest-icon">
                             </a>
                         </li>
                             <li>
                             <a href="#">
-                                <img src="img/footer-periscope.png" alt="periscope-icon">
+                                <img src="@/assets/img/footer-periscope.png" alt="periscope-icon">
                             </a>
                         </li>
                     </ul>
@@ -255,6 +255,8 @@ export default {
         }
     }
     .footer__top {
-        background-image: url("/img/footer-bg.jpg");
+        background-image: url('~@/assets/img/footer-bg.jpg');
+        background-position: center;
+        background-size: cover;
     }
 </style>

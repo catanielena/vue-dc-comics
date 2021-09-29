@@ -4,7 +4,7 @@
             <ul class="services__list">
                 <li class="list__item" v-for="(service, i) in serviceList" :key="`service${i}`">
                     <div class="item__img">
-                        <img :src="`img/${service.img}`" :alt="service.text">
+                        <img :src="require(`@/assets/img/${service.img}`)" :alt="service.text">
                     </div>
                     <a :href="service.url">{{service.text}}</a>
                 </li>
