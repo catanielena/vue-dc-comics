@@ -1,5 +1,9 @@
 <template>
-     <p>page content</p>
+    <section class="PageContent">     
+        <div class="container">
+            <p>-->Content goes here&lt;--</p>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -8,6 +12,14 @@ export default {
 }
 </script>
 
-<style scoped>
-    @import '/assets/style/common'
+<style scoped lang="scss">
+    @import '@/assets/style/common';
+    @import '@/assets/style/variables';
+
+    .PageContent {
+        background-color: $grey100;
+        padding: $sectionPadding;
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
 </style>
