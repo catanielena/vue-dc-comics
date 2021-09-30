@@ -111,7 +111,6 @@ export default {
 
     .PageContent {
         background-color: $grey100;
-        font-size: 1.375rem;
         font-weight: 700;
         $this: &;
 

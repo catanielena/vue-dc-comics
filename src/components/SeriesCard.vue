@@ -43,7 +43,6 @@ export default {
             height: 5rem;
             text-transform: uppercase;
             font-weight: 400;
-            font-size: 1rem;
             margin-top: $smGapX2;
         }
 
