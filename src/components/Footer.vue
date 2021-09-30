@@ -77,112 +77,37 @@ export default {
     data() {
         return {
             dcComics: [
-                {
-                    text:"Characters",
-                    url:"#"
-                },
-                {
-                    text:"Comics",
-                    url:"#"
-                },
-                    {
-                    text:"Movies",
-                    url:"#"
-                },
-                                {
-                    text:"TV",
-                    url:"#"
-                },
-                {
-                    text:"Games",
-                    url:"#"
-                },
-                {
-                    text:"Videos",
-                    url:"#"
-                },
-                {
-                    text:"News",
-                    url:"#"
-                },
+                {text:"Characters", url:"#"},
+                {text:"Comics", url:"#"},
+                {text:"Movies", url:"#"},
+                {text:"TV", url:"#"},
+                {text:"Games", url:"#"},
+                {text:"Videos", url:"#"},
+                {text:"News", url:"#"},
             ],
             shop: [
-                {
-                    text:"Shop DC",
-                    url:"#"
-                },
-                {
-                    text:"Shop DC Collwctiibles",
-                    url:"#"
-                }
+                {text:"Shop DC", url:"#"},
+                {text:"Shop DC Collwctiibles", url:"#"}
             ],
             dc: [
-                {
-                    text:"Terms of Use",
-                    url:"#"
-                },
-                {
-                    text:"Privacy policy (New)",
-                    url:"#"
-                },
-                    {
-                    text:"Ad Choices",
-                    url:"#"
-                },
-                {
-                    text:"Advertising",
-                    url:"#"
-                },
-                {
-                    text:"Jobs",
-                    url:"#"
-                },
-                {
-                    text:"Subscription",
-                    url:"#"
-                },
-                {
-                    text:"Talent Workshop",
-                    url:"#"
-                },
-                {
-                    text:"CPSC Certificates",
-                    url:"#"
-                },
-                {
-                    text:"Ratings",
-                    url:"#"
-                },
-                {
-                    text:"Shop Help",
-                    url:"#"
-                },
-                {
-                    text:"Contact Us",
-                    url:"#"
-                }
+                {text:"Terms of Use", url:"#"},
+                {text:"Privacy policy (New)", url:"#"},
+                {text:"Ad Choices", url:"#"},
+                {text:"Advertising", url:"#"},
+                {text:"Jobs", url:"#"},
+                {text:"Subscription", url:"#"},
+                {text:"Talent Workshop", url:"#"},
+                {text:"CPSC Certificates", url:"#"},
+                {text:"Ratings", url:"#"},
+                {text:"Shop Help", url:"#"},
+                {text:"Contact Us", url:"#"}
             ],
             sites: [
-                {
-                    text:"DC",
-                    url:"#"
-                },
-                {
-                    text:"MAD Magazines",
-                    url:"#"
-                },
-                {
-                    text:"DC Kids",
-                    url:"#"
-                },
-                {
-                    text:"DC Universe",
-                    url:"#"
-                },
-                {
-                    text:"DC Power Visa",
-                    url:"#"
-                }
+                {text:"DC", url:"#"},
+                {text:"MAD Magazines", url:"#"},
+                {text:"DC Kids", url:"#"},
+                {text:"DC Universe", url:"#"},
+                {text:"DC Power Visa", url:"#"}
             ],
         }
     }
@@ -192,11 +117,13 @@ export default {
 <style scoped lang="scss">
     @import '@/assets/style/common';
     @import '@/assets/style/variables';
-
+    @import '@/assets/style/mixin';
     footer {
         background-color: $grey300;
         .footer {
+            $this: &;
             &__top {
+                @include bgImg('../assets/img/footer-bg.jpg');
                 .container {
                     @include flex--SB-C;
                     overflow: hidden;
@@ -208,7 +135,7 @@ export default {
                 }
 
                 .top__list{
-                    display: flex;
+                    @include inlineList;
                     justify-content: flex-start;
                 }
 
@@ -253,10 +180,5 @@ export default {
                 }
             }
         }
-    }
-    .footer__top {
-        background-image: url('~@/assets/img/footer-bg.jpg');
-        background-position: center;
-        background-size: cover;
     }
 </style>

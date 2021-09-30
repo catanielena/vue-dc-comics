@@ -78,8 +78,6 @@ export default {
 
 <style scoped lang="scss">
     @import '@/assets/style/common';
-    @import '@/assets/style/variables';
-
     header {
         background-color: #fff;
         position: fixed;
@@ -87,30 +85,40 @@ export default {
 
         .header {
             @include flex--SB-C;
+            $this: &;
             &__logo {
                 height: 4.375rem;
-
                 img{
                     height: 100%
                 }
             };
             &__nav {
-                ul {
-                    display: flex;
+                .nav__list {
+                    @include inlineList;
 
-                    .list__item {
-                        a {
-                            line-height: $lineheightLink;
-                            margin: 0 1.25rem;
-                            font-weight: 700;
-                            color: $grey100;
-    
-                            &.active {
-                                border-bottom: 3px solid;
-                                color: $mainColor;
-                                border-color: $mainColor;
-                            }
-                        }
+                    a {
+                        position: relative;
+                        line-height: $lineheightLink;
+                        margin: 0 1.25rem;
+                        font-weight: 700;
+                        color: $grey100;
+
+                    }
+
+                    a.active::after, 
+                    a:hover::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $mainColor;
+                    }
+
+                    a.active,
+                    a:hover {
+                        color: $mainColor;
                     }
                 }
             }

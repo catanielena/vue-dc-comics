@@ -3,10 +3,12 @@
         <div class="container services">
             <ul class="services__list">
                 <li class="list__item" v-for="(service, i) in serviceList" :key="`service${i}`">
-                    <div class="item__img">
-                        <img :src="require(`@/assets/img/${service.img}`)" :alt="service.text">
-                    </div>
-                    <a :href="service.url">{{service.text}}</a>
+                    <a :href="service.url">
+                        <div class="item__img">
+                            <img :src="require(`@/assets/img/${service.img}`)" :alt="service.text">
+                        </div>
+                        <span>{{service.text}}</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -54,28 +56,28 @@ export default {
 <style scoped lang="scss">
     @import '@/assets/style/common';
     @import '@/assets/style/variables';
-    
+    @import '@/assets/style/mixin';
     .BrandServices {
         background-color: $mainColor;
         padding: $sectionPadding;
-        .services {
 
-            &__list {
-                @include flex--SB-C;
-                .list__item {
-                    display: flex;
-                    align-items: center;
+        .services__list {
+            @include flex--SB-C;
+            @include inlineList;
+            a {
+                display: flex;
+                align-items: center;
+                color: #fff;
 
-                    .item__img {
-                        height: 3.125rem;
-                        img {
-                            max-width: 3.125rem;
-                            height: 100%;
-                        }
-                    }
-                    a {
-                        color: #fff;
-                        margin: 0 .9375rem;
+                & > * {
+                    margin: 0 .45rem;
+                }
+
+                .item__img {
+                    height: 3.125rem;
+                    img {
+                        max-width: 3.125rem;
+                        height: 100%;
                     }
                 }
             }

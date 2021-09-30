@@ -1,5 +1,5 @@
 @import './variables';
-
+@import './mixin';
 // reset
 * {
     box-sizing: border-box;
@@ -20,6 +20,7 @@ h5 {
 h4 {
     font-size: 1.2rem;
 }
+
 //container
 .container {
     max-width: $widthContainer;
@@ -29,8 +30,6 @@ h4 {
 
 //reset list
 ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 
@@ -47,11 +46,4 @@ button {
     background-color: transparent;
     border: none;
     color: #fff;
-}
-
-//flex-center-between
-@mixin flex--SB-C{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
