@@ -62,7 +62,7 @@ export default {
         padding: $sectionPadding;
 
         .services__list {
-            @include flex--SB-C;
+            @include flex--SA-C;
             @include inlineList;
             a {
                 display: flex;

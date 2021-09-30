@@ -4,6 +4,14 @@
     justify-content: space-between;
     align-items: center;
 }
+
+//flex-center-between
+@mixin flex--SA-C{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 // background image
 @mixin bgImg($pathImg) {
     background-image: url($pathImg);
