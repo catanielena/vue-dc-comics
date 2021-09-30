@@ -40,27 +40,27 @@
                     <ul class="right__list">
                         <li class="list__item">
                             <a href="#">
-                                <img src="@/assets/img/footer-facebook.png" alt="facebook-icon">
+                                <img src="../assets/img/footer-facebook.png" alt="facebook-icon">
                             </a>
                         </li>
                             <li>
                             <a href="#">
-                                <img src="@/assets/img/footer-twitter.png" alt="twitter-icon">
+                                <img src="../assets/img/footer-twitter.png" alt="twitter-icon">
                             </a>
                         </li>
                             <li>
                             <a href="#">
-                                <img src="@/assets/img/footer-youtube.png" alt="youtube-icon">
+                                <img src="../assets/img/footer-youtube.png" alt="youtube-icon">
                             </a>
                         </li>
                             <li>
                             <a href="#">
-                                <img src="@/assets/img/footer-pinterest.png" alt="pinterest-icon">
+                                <img src="../assets/img/footer-pinterest.png" alt="pinterest-icon">
                             </a>
                         </li>
                             <li>
                             <a href="#">
-                                <img src="@/assets/img/footer-periscope.png" alt="periscope-icon">
+                                <img src="../assets/img/footer-periscope.png" alt="periscope-icon">
                             </a>
                         </li>
                     </ul>
@@ -115,9 +115,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '@/assets/style/common';
-    @import '@/assets/style/variables';
-    @import '@/assets/style/mixin';
+    @import '../assets/style/common';
+
     footer {
         background-color: $grey300;
         .footer {
@@ -156,7 +155,7 @@ export default {
 
                     a {
                         width: 2rem;
-                        margin: 0 .625rem;
+                        margin: 0 $smGapX2;
                         img {
                             width: 100%;
                         }
@@ -165,8 +164,7 @@ export default {
 
                 .btn {
                     border: 2px solid $mainColor;
-                    padding: 1rem;
-                    font-size: 1rem;
+                    padding: $mdGap;
                 }
 
                 .bottom__right {
@@ -174,7 +172,7 @@ export default {
                     align-items: center;
 
                     h4 {        
-                        margin: 0 .625rem;
+                        margin: 0 $smGapX2;
                         color: $mainColor;
                     }
                 }

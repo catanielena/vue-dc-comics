@@ -11,6 +11,14 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+//object fit
+@mixin objFit--C-T {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
 // inlineList
 @mixin inlineList {
     display: flex;

@@ -2,7 +2,7 @@
     <header>
         <div class="container header">
             <div class="header__logo">
-                <img class="logo__img" src="@/assets/img/dc-logo.png" alt="dc-logo">
+                <img class="logo__img" src="../assets/img/dc-logo.png" alt="dc-logo">
             </div>
             <nav class="header__nav">
                 <ul class="nav__list">
@@ -77,10 +77,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '@/assets/style/common';
+    @import '../assets/style/common';
+    
     header {
         background-color: #fff;
         position: fixed;
+        z-index: 1;
         width: 100%;
 
         .header {

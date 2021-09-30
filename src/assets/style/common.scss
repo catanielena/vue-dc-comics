@@ -9,18 +9,21 @@
 
 //font
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
-body {
+body, button {
     font-family: 'PT Sans Narrow', sans-serif;
 }
-
-h5 {
-    font-size: .9375rem;
+h3 {
+    font-size: 1.75rem;
+    text-transform: uppercase;
 }
 
 h4 {
     font-size: 1.2rem;
 }
 
+h5 {
+    font-size: .9375rem;
+}
 //container
 .container {
     max-width: $widthContainer;
@@ -46,4 +49,5 @@ button {
     background-color: transparent;
     border: none;
     color: #fff;
+    font-size: 1rem;
 }

@@ -5,7 +5,7 @@
                 <li class="list__item" v-for="(service, i) in serviceList" :key="`service${i}`">
                     <a :href="service.url">
                         <div class="item__img">
-                            <img :src="require(`@/assets/img/${service.img}`)" :alt="service.text">
+                            <img :src="require(`../assets/img/${service.img}`)" :alt="service.text">
                         </div>
                         <span>{{service.text}}</span>
                     </a>
@@ -54,9 +54,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '@/assets/style/common';
-    @import '@/assets/style/variables';
-    @import '@/assets/style/mixin';
+    @import '../assets/style/common';
+    @import '../assets/style/variables';
+    @import '../assets/style/mixin';
     .BrandServices {
         background-color: $mainColor;
         padding: $sectionPadding;
