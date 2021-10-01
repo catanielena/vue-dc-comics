@@ -1,9 +1,7 @@
 <template>
     <section class="PageContent">   
         <!-- jumbotron -->
-        <div class="PageContent__jumbotron">
-            <img src="../assets/img/jumbotron.jpg" alt="jumbotron-img">
-        </div>  
+        <Hero :heroImg="require('../assets/img/jumbotron.jpg')" :heroCaption="'cartoon_bg'"/>
         <!-- /jumbotron -->
         <!-- current series -->
         <div class="container PageContent__sct-series">
@@ -21,18 +19,25 @@
 
 <script>
 import SeriesCard from '../components/SeriesCard.vue';
+import Hero from '../components/Hero.vue';
 
+import axios from "axios";
 export default {
     name: "PageContent",
-    components: { SeriesCard },
+    components: { SeriesCard, Hero },
     data() {
         return {
             currentSeries: []
         }
     },
     mounted() {
-        fetch('../assets/data/dc-comics.json')
-        .then(response => this.currentSeries = response.data)
+        // axios.get('../data/dc-comics.json')
+        // .then(response =>this.currentSeries = response.data)
+        // .catch((err) => console.log(err))
+        axios
+            .get('../data/dc-comics.json')
+            .then(response => (this.currentSeries = response.data))
+            .catch(error => console.log(error))
     }
 }
 </script>
@@ -44,14 +49,6 @@ export default {
         background-color: $grey100;
         font-weight: 700;
         $this: &;
-
-        &__jumbotron {
-            height: 25rem;
-            overflow: hidden;
-            img {
-                @include objFit--C-T;
-            }
-        }
 
         &__sct-series {
             .sct-series__series-list {
